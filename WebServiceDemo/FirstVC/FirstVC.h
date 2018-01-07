@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FirstVC.h
 //  WebServiceDemo
 //
 //  Created by Kondya on 07/01/18.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FirstVC : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *firstVcTable;
 
 @end
-
