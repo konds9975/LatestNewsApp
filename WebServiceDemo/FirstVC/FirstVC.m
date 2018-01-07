@@ -45,7 +45,7 @@
                                       if ([data length]>0 && error == nil)
                                       {
                                           resultsDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
-                                          NSLog(@"resultsDictionary is %@",resultsDictionary);
+                                         // NSLog(@"resultsDictionary is %@",resultsDictionary);
                                           self.firstVCDataArray = [[NSMutableArray alloc]init];
                                           
                                           NSString *status = [resultsDictionary valueForKey:@"status"];
@@ -115,6 +115,10 @@
 {
     ArticalsData *temp = [self.firstVCDataArray objectAtIndex:indexPath.row];
     NSLog(@"%@   %@   %@    %@   %@  %@",temp.id1,temp.name,temp.publishedAt,temp.description1,temp.urlToImage,temp.title);
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 250;
 }
 
 
